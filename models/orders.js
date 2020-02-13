@@ -4,15 +4,18 @@ const Schema = mongoose.Schema;
 
 const OrderSchema = new Schema({
     customer: {
-        type: CustomerSchema.Types.ObjectId,
+        type: Schema.ObjectId,
+        ref: 'customer',
         required:  true
     },
     helper: {
-        type: HelperSchema.Types.ObjectId,
+        type: Schema.ObjectId,
+        ref: 'helper',
         required: true
     },
     service: {
-        type: ServicesSchema.Types.ObjectId,
+        type: Schema.ObjectId,
+        ref: 'service',
         required: true
     },
     price: {

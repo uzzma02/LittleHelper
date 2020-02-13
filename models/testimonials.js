@@ -3,15 +3,18 @@ const Schema = mongoose.Schema;
 
 const TestimonialSchema = new TestimonialSchema({
     helper: {
-        type: HelperSchema.Types.ObjectId,
+        type: Schema.ObjectId,
+        ref: 'helper',
         required: true
     },
     order: {
-        type: OrderSchema.Types.ObjectId,
+        type: Schema.ObjectId,
+        ref: 'order',
         required: true
     },
     customer: {
-        type: CustomerSchema.Types.ObjectId,
+        type: Schema.ObjectId,
+        ref: 'customer',
         required: true
     }
 })
