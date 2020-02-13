@@ -4,7 +4,7 @@ const Services = ()=> {
     return (
         //---- Services Section ----
         <section id="portfolio">
-            <div className="container-fluid p-0 flex">
+            <div className="container-fluid p-0">
             <div className="row no-gutters align-items-stretch">
                 <div className="col-lg-4 col-sm-6">
                 <a className="portfolio-box" href="https://images.unsplash.com/photo-1562886877-f12251816e01?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop">
