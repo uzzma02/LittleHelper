@@ -1,41 +1,30 @@
 import React from 'react';
-import Navigation from './Navigation.js';
-import Header from './Header.js';
-import HowItWorks from './HowItWorks.js';
-import Services from './Services.js';
-import AppDownload from './AppDownload.js';
-import Footer from './Footer.js';
-//import './App.css';
-import './css/creative.css';
+import {BrowserRouter,Route, Switch} from 'react-router-dom';
+import LandingPage from './LandingPage';
+import ServicesCategories from './ServicesCategories';
+import AppContext from './AppContext';
+import Navigation from './Navigation';
+import Header from './Header';
+import Footer from './Footer';
 
+const App = () => {
 
-function App() {
+  // const [globalState, setGlobalState] = useState(
+  //   {
+  //     loggedIn: true
+  //   }
+  // )
   return (
-    <div className="App">
-      
+      <BrowserRouter>
+
         <Navigation/>
 
-        <div>
-          <Header/>
-        </div>
-        
-        <div>
-          <HowItWorks/>
-        </div>
-
-        <div>
-          <Services/>
-        </div>
-
-        <div>
-          <AppDownload/>
-        </div>
-        
+        <Switch>
+          <Route path="/" exact component={LandingPage} />
+          <Route path="/servicescategories" component={ServicesCategories} />
+        </Switch>
         <Footer/>
-        
-      
-    </div>
-  );
+      </BrowserRouter>
+  )
 }
-
 export default App;

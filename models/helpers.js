@@ -12,29 +12,33 @@ const HelperSchema = new Schema({
         required: true
     },
     dateOfBirth: {
-        type: Number,
+        type: Date,
         required: true
     },
     email: {
         type: String,
         required: true
     },
-    phNumber: {
+    password:{
         type: String,
         required: true
     },
-    openOrders: {
+    phNumber: {
+        type: Number,
+        required: true
+    },
+    /*openOrders: {
         type: Array,
         required: true
     },
     fulfilledOrders: {
         type: Array,
         required: true
-    },
+    },*/
     servicesOffered: {
         type: Array,
         required: true
-    },
+    }/*,
     rating: {
         type: Number,
         required: true
@@ -42,8 +46,8 @@ const HelperSchema = new Schema({
     reviews: {
         type: Array,
         required: true
-    }
+    }*/
 })
 
-const HelpersModel = mongoose.model('helper', HelperSchema);
-module.exports = HelpersModel;
+const helpersModel = mongoose.model('helper', HelperSchema);
+module.exports = helpersModel;
